@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            background-color: tomato;
+            height: 300px;
+            width: 300px;
+        }
+
+        .btn2 {
+            padding-bottom: 30px;
+            padding-top: 30px;
+            padding-right: 30px;
+            padding-left: 30px;
+            color: white;
+            background-color: tomato;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+
+    </div>
+    <button onclick="clickevent()">Change Color</button>
+    <button id="1b" class="btn2" onclick="getvalue(id)">1</button>
+    <BUTton id="2b" class="btn2" onclick="getvalue(id)">2</BUTton>
+    <button id="3b" class="btn3" onclick="getvalue(id)">+</button>
+    <button id="isqualto" onclick="calculate()">=</button>
+    <script>
+        let inputstring = " ";
+        function clickevent() {
+            if (document.getElementsByClassName('box')[0].style.backgroundColor == "blue") {
+                document.getElementsByClassName('box')[0].style.backgroundColor = "red";
+
+            }
+            else {
+                document.getElementsByClassName('box')[0].style.backgroundColor = "blue";
+
+            }
+
+        }
+        function getvalue(id) {
+            
+            let inputvalue = document.getElementById(id).innerText;
+            inputstring = inputstring + inputvalue;
+            document.getElementsByClassName('box')[0].innerText = inputstring;
+
+
+        }
+        function calculate() {
+            if (document.getElementById('isqualto').innerText == "=") {
+                let result = eval(inputstring);
+                document.getElementsByClassName('box')[0].innerText = result;
+            }
+
+
+        }
+
+
+
+
+
+    </script>
+</body>
+
+</html>
