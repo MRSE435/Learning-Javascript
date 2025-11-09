@@ -1,0 +1,68 @@
+.box
+{
+    height: 640px;
+    width: 356px;
+    background-color: rgb(12, 12, 12);
+    padding: 30px;
+
+}
+
+.screen
+{
+    color: rgb(136, 28, 28);
+    background-color: white;
+    width: 100%;
+    
+    font-size: 30px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20%;
+    margin-bottom: 40px;
+}
+.buttoncontainer
+{
+   display: grid;
+   grid-template-columns: repeat(4,minmax(37px,1fr));
+   gap: 10px;
+  
+}
+.btn
+{
+    padding: 30px;
+    background-color:orange;
+    border-radius: 40px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+   font-weight: 900;
+    font-size: 20px;
+    
+}
+/* style.css */
+.btn:active {
+    /* Darken the color more significantly */
+    background-color: rgb(200, 100, 0); 
+    /* Make the button slightly smaller */
+    transform: scale(0.95); 
+    /* Or, you can translate it down a pixel or two */
+    /* transform: translateY(2px); */ 
+    
+    /* Remove the shadow to make it look flush */
+    box-shadow: none; 
+}
+/* style.css */
+.btn:hover {
+    /* Slightly darken the background color */
+    background-color: rgb(255, 140, 0); 
+    /* Add a subtle shadow */
+    box-shadow: 0 0 10px rgba(255, 165, 0, 0.7); 
+    /* Change the cursor to a pointer */
+    cursor: pointer; 
+}
+body
+{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
